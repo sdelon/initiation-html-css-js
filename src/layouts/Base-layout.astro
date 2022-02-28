@@ -1,0 +1,48 @@
+---
+// src/layouts/BaseLayout.astro
+const {title} = Astro.props;
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style/global.css">
+
+    <style>
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: min(100%, 68ch);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Accueil</a>
+          </li>
+          <li>
+            <a href="/html">HTML</a>
+          </li>
+          <li>
+            <a href="/css">CSS</a>
+          </li>
+          <li>
+            <a href="/javascript">Javascript</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <slot/>
+    </main>
+</body>
+</html>
