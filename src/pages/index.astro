@@ -1,9 +1,10 @@
 ---
 import Test from '../components/Test.svelte';
 import BaseLayout from '../layouts/Base-layout.astro'
+let permalink = Astro.request.canonicalURL.toString();
 ---
 
-<BaseLayout title="Initiation HTML, CSS et Javascript">
+<BaseLayout title="Initiation HTML, CSS et Javascript" description="accueil description" permalink={permalink}>
   <h1>Hello, world!</h1>
   <Test client:visible />
 </BaseLayout>

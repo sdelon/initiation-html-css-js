@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../layouts/Base-layout.astro'
+let permalink = Astro.request.canonicalURL.toString();
 ---
 
-<BaseLayout title="HTML">
+<BaseLayout title="HTML" description="description HTML" permalink={permalink}>
   <h1>HTML</h1>
 </BaseLayout>
